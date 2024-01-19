@@ -4,17 +4,30 @@
         <div class="breadcrumb d-flex align-items-center pt-3">
             <span>Tableau des ventes</span>
             <span class="separator"></span>
-            <span>{{'2024-01-14'|date: 'longDate'}}</span>
+            <span>{{'2024-01-14'|date}}</span>
             <span class="separator"></span>
             <span>Dakar, Sénégal</span>
         </div>
     </div>
 
     <div class="main__content">
-        <dx-data-grid
-            [dataSource]="sells">
-        </dx-data-grid>
-        <dx-select-box [dataSource]="sells">
-        </dx-select-box>
+        <div class="card">
+            <div class="card-body">
+                <dx-data-grid [dataSource]="sells" [remoteOperations]="true" [width]="'100%'" [height]="600"
+                    [showBorders]="true">
+                    <dxo-export [enabled]="true"></dxo-export>
+                    <dxo-search-panel [visible]="true" [highlightCaseSensitive]="true"></dxo-search-panel>
+                    <dxo-filter-row [visible]="true"></dxo-filter-row>
+                    <dxo-scrolling mode="virtual"></dxo-scrolling>
+                    <dxo-grouping [autoExpandAll]="false"></dxo-grouping>
+                    <dxi-column dataField="numero_commande">
+                        <dxo-header-filter groupInterval="100"></dxo-header-filter>
+                    </dxi-column>
+                    <dxi-column dataField="date_de_commande"></dxi-column>
+                    <dxi-column dataField="nom_du_vendeur"></dxi-column>
+                    <dxi-column dataField="type_vente"></dxi-column>
+                </dx-data-grid>
+            </div>
+        </div>
     </div>
 </div>
