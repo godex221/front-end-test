@@ -1,0 +1,61 @@
+:host {
+    nav {
+        padding: 10px 0;
+        .nav__left > img {
+            max-width: 180px;
+            width: 70vw;
+        }
+        .nav__right  {
+            button {
+                border: 0;
+                margin-right: 20px;
+                width: 50px;
+                background-color: white;
+                border-radius: 100px;
+                aspect-ratio: 1;
+                img {
+                    object-fit: contain;
+                    width: 40px;
+                    padding: 10px;
+                }
+                transition: scale ease-in-out .3s;
+            }
+            button:hover {
+                scale: 1.2;
+            }
+            .profile {
+                .profile__left {
+                    img {
+                        width: 50px;
+                        border-radius: 100px;
+                        margin-right: 10px;
+                    }
+                }
+                .profile__right {
+                    h4 {
+                        font-size: 22px;
+                        font-family: SF_Pro_Display_Bold;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    h6 {
+                        font-size: 16px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    aside {
+        button {
+            margin-bottom: 20px;
+            padding: 7px 20px;
+            img {
+                width: 25px;
+                aspect-ratio: 1;
+                object-fit: contain;
+            }
+        }
+    }
+}
