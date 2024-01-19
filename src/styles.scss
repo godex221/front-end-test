@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: SF_Pro_Display_Black;
+    src: url("assets/fonts/SF-Pro-Display-Black.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SF_Pro_Display_Bold;
+    src: url("assets/fonts/SF-Pro-Display-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SF_Pro_Display_Heavy;
+    src: url("assets/fonts/SF-Pro-Display-Heavy.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SF_Pro_Regular;
+    src: url("assets/fonts/SF-Pro-Text-Regular.otf") format("opentype");
+}
+
+* {
+    font-family: SF_Pro_Regular;
+}
+
+:root {
+    --background: #EBEDF4;
+}
+
+main  {
+    min-height: 100vh;
+    background-color: var(--background);
+}
