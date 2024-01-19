@@ -22,10 +22,10 @@
     <div class="col-3">
       <aside class="d-flex flex-column">
         @for(button of buttons; track button) {
-          <a routerLink="{{button.path}}" class="d-flex justify-content-start align-items-center">
+          <button (click)="redirect(button.path)" class="d-flex justify-content-start align-items-center">
             <img src="{{isActiveUrl(button.path) ? button.imageActive : button.image}}" alt="icon">
             <span>{{button.libelle}}</span>
-          </a>
+          </button>
         }
       </aside>
     </div>

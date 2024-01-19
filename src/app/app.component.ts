@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { BTN_ASIDE } from '../utils/interfaces';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 @Component({
   selector: 'app-root',
@@ -32,8 +33,19 @@ export class AppComponent {
   ];
   title = 'test-front-end';
 
+  constructor(private router: Router){}
+
   public isActiveUrl(value: string): boolean {
     const url = window.location.pathname;
     return url.includes(value) ? true : false;
+  }
+
+  public toastComingSoon() {
+    Notify.info('Pas encore disponible ! Reessayer ulterieurement.');
+  }
+
+  public redirect(path: string){
+    if(path == '/analytics') return this.toastComingSoon();
+    this.router.navigateByUrl(path);
   }
 }

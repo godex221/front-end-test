@@ -24,7 +24,7 @@
                                     @for(element of mainChartElements; track $index;) {
                                         <div class="col">
                                             <div class="main__chart__bar d-flex align-items-end">
-                                                <div class="main__chart__bar__fill" [style.height]="element*150/100 +'px'"></div>
+                                                <div class="main__chart__bar__fill" [style.height]="element+20*150/100 +'px'"></div>
                                             </div>
                                             <div class="main__chart__month">{{months[$index]}}</div>
                                         </div>
