@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './overview.component.scss'
 })
 export class OverviewComponent {
-
+  public mainChartElements: number[] = [0,0,0,0,0,0,0,0,0,0,0,0]
 }

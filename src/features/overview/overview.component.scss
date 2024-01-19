@@ -21,7 +21,7 @@
             font-size: 16px;
             font-family: SF_Pro_Display_Bold;
         }
-        span {
+        .year__badge {
             background-color: var(--blue);
             padding: 7px 10px;
             color: white;
@@ -59,8 +59,28 @@
         .small__card.bg-gray {
             background: var(--background);
         }
+        .main__chart {
+            background: var(--background);
+            border-radius: 10px;
+        }
     }
     .yesterday__card {
         background: var(--background-dark);
+        color: white;
+        button {
+            background-color: transparent;
+            color: white;
+        }
+        .small__card__content {
+            h4 {
+                font-size: 50px;
+                font-family: SF_Pro_Display_Bold;
+            }
+            .green-badge {
+                padding: 5px 10px;
+                background: var(--green);
+                border-radius: 20px;
+            }
+        }
     }
 }
