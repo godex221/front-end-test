@@ -4,3 +4,10 @@ export interface SELL {
     nom_du_vendeur: string,
     type_vente: "MOBILE" | "FIXE",
 }
+
+export interface BTN_ASIDE {
+    path: string,
+    libelle: string,
+    image: string,
+    imageActive: string,
+} 

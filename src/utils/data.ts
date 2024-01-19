@@ -1,9 +1,6 @@
-export const Ventes: {
-  numero_commande: number;
-  date_de_commande: string;
-  nom_du_vendeur: string;
-  type_vente: "MOBILE" | "FIXE";
-}[] = [
+import { SELL } from "./interfaces";
+
+export const Ventes: SELL[] = [
   {
     numero_commande: 91685015266,
     date_de_commande: "2023-03-01",

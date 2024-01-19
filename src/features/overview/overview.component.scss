@@ -1,0 +1,66 @@
+:host {
+    .breadcrumb > * {
+        color: var(--breadcrumb);
+        font-size: 16px;
+    }
+    h2 {
+        font-weight: 500;
+        font-family: SF_Pro_Display_Bold;
+    }
+    .separator {
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background-color: var(--breadcrumb);
+        margin: 0 10px;
+    }
+
+    .card {
+        border: none;
+        h3 {
+            font-size: 16px;
+            font-family: SF_Pro_Display_Bold;
+        }
+        span {
+            background-color: var(--blue);
+            padding: 7px 10px;
+            color: white;
+            font-family: SF_Pro_Display_Bold;
+            border-radius: 8px;
+        }
+        button {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            background-color: white;
+            border: 1px solid gray;
+        }
+        .small__card {
+            height: 120px;
+            border: 1px solid  var(--background);
+            border-radius: 7px;
+            .small__card__top {
+                .blue-point, .green-point {
+                    width: 10px;
+                    border-radius: 100px;
+                    height: 10px;
+                    padding: 0;
+                    background-color: var(--blue);
+                }
+                .green-point {
+                    background-color: var(--green);
+                }
+            }
+            .small__card__content {
+                font-size: 32px;
+                font-family: SF_Pro_Display_Bold;
+            }
+        }
+        .small__card.bg-gray {
+            background: var(--background);
+        }
+    }
+    .yesterday__card {
+        background: var(--background-dark);
+    }
+}
