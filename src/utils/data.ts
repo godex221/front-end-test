@@ -3,7 +3,7 @@ import { SELL } from "./interfaces";
 export const Ventes: SELL[] = [
   {
     numero_commande: 91685015266,
-    date_de_commande: "2023-03-01",
+    date_de_commande: "2024-01-18",
     nom_du_vendeur: "ABDOUL ALPHA DIA",
     type_vente: "MOBILE",
   },

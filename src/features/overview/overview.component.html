@@ -19,13 +19,14 @@
                             <p class="year__badge">2023</p>
                         </div>
                         <div class="card__body" >
-                            <div class="main__chart p-2" style="height: 150px;">
+                            <div class="main__chart px-4 py-2">
                                 <div class="row">
-                                    @for(element of mainChartElements; track element) {
+                                    @for(element of mainChartElements; track $index;) {
                                         <div class="col">
-                                            <div class="main__chart__bar">
-                                                {{element}}
+                                            <div class="main__chart__bar d-flex align-items-end">
+                                                <div class="main__chart__bar__fill" [style.height]="element*150/100 +'px'"></div>
                                             </div>
+                                            <div class="main__chart__month">{{months[$index]}}</div>
                                         </div>
                                     }
                                 </div>
@@ -52,7 +53,7 @@
                                             Mobile
                                         </div>
                                         <div class="small__card__content">
-                                            221
+                                            {{mobileSells}}
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +64,7 @@
                                             Fixe
                                         </div>
                                         <div class="small__card__content">
-                                            221
+                                            {{fixeSells}}
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +84,7 @@
                         </div>
                         <div class="small__card__content">
                             <div class="d-flex align-items-center">
-                                <h4>54</h4>
+                                <h4>{{yesterSellsLength}}</h4>
                                 <span class="mx-2 green-badge">+ 30%</span>
                                 <p class="mt-3">/ hier</p>
                             </div>
